@@ -1,5 +1,6 @@
 {
   "version": "0.8.1",
+  "name": "docusaurus-graphql-plugin",
   "private": true,
   "workspaces": [
     "./docs",
