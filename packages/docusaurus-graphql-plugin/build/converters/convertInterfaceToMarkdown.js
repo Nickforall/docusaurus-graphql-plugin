@@ -3,11 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.convertInterfaceToMarkdown = void 0;
 const pushFields_1 = require("./pushFields");
 const pushInterfaces_1 = require("./pushInterfaces");
-const parseMarkdown_1 = require("./parseMarkdown");
 function convertInterfaceToMarkdown(inter, implementedBy, options) {
     const lines = [];
     lines.push(`## ${inter.name}`, `\n\n`);
-    lines.push(parseMarkdown_1.parseMarkdown(inter.description || ""), `\n\n`);
+    lines.push(inter.description || "", `\n\n`);
     const subInterfaces = inter.getInterfaces();
     if (subInterfaces.length > 0) {
         pushInterfaces_1.pushInterfaces(lines, subInterfaces, options);

@@ -5,7 +5,7 @@ const parseMarkdown_1 = require("./parseMarkdown");
 function convertEnumToMarkdown(enm, _) {
     const lines = [];
     lines.push(`## ${enm.name}`, `\n\n`);
-    lines.push(parseMarkdown_1.parseMarkdown(enm.description || ""), `\n\n`);
+    lines.push(enm.description || "", `\n\n`);
     lines.push(`<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>`, `\n\n`);
     lines.push(`<table>`, `\n`);
     lines.push(`<thead><tr><th>Value</th><th>Description</th></tr></thead>`, `\n`);

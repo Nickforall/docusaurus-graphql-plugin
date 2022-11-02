@@ -7,7 +7,7 @@ exports.parseMarkdown = void 0;
 const marked_1 = __importDefault(require("marked"));
 function parseMarkdown(markdown) {
     const walkTokens = (token) => {
-        if (token.type === "text") {
+        if (token.type === "text" || token.type == "code") {
             // make the Markdown compatible with MDX by escaping curly braces
             token.text = token.text
                 .replace(/\{/g, "&lbrace;")
