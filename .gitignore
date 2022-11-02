@@ -103,6 +103,6 @@ dist
 # TernJS port file
 .tern-port
 
-build/
+# build/
 docs/docs/**/*.md
 packages/docusaurus-graphql-plugin/README.md
