@@ -1,7 +1,6 @@
 import { GraphQLField } from "graphql";
 import { MarkdownConverterOptions } from "../types";
 import { pushArguments } from "./pushArguments";
-import { parseMarkdown } from "./parseMarkdown";
 
 export function convertMutationToMarkdown(
   mutation: GraphQLField<any, any>,
@@ -25,7 +24,7 @@ export function convertMutationToMarkdown(
     lines.push(`> Deprecated: ${mutation.deprecationReason}`, `\n\n`);
   }
 
-  lines.push(parseMarkdown(mutation.description || ""), `\n\n`);
+  lines.push(mutation.description || "", `\n\n`);
 
   if (mutation.args.length > 0) {
     pushArguments(lines, mutation.args, options);
